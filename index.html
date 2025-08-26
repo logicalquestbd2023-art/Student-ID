@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student ID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Allow clipboard access via Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="clipboard-write=(self)">
+</head>
+<body>
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbw7OgItPKmd7S36MsVyFCBblEDRji8hPOGu0l6rziwc5dVndk4NSnbwJy8NIPdD9qY4/exec"
+        style="width: 100%; height: 100vh; border: none;"
+        allow="clipboard-write">
+    </iframe>
+
+    <script>
+        // Example: Test clipboard access (only for debugging, remove in production)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Optional: Test clipboard functionality
+            async function testClipboard() {
+                try {
+                    await navigator.clipboard.writeText('Test clipboard');
+                    console.log('Clipboard write successful');
+                } catch (err) {
+                    console.error('Clipboard write failed:', err);
+                }
+            }
+
+            // Uncomment to test clipboard access
+            // testClipboard();
+        });
+    </script>
+</body>
+</html>
